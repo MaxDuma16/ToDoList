@@ -47,16 +47,18 @@ export default class App extends Component {
   };
 
   addItem = (text) => {
-    const newItem = this.createTodoItem(text);
-    this.setState(( {todoData} ) => {
-      const newArr = [
-        ...todoData,
-        newItem
-      ];
-      return {
-        todoData: newArr
-      };
-    });
+    if(text) {
+      const newItem = this.createTodoItem(text);
+      this.setState(( {todoData} ) => {
+        const newArr = [
+          ...todoData,
+          newItem
+        ];
+        return {
+          todoData: newArr
+        };
+      });
+    } 
   };
 
   toggleProperty(arr, id, propName) {

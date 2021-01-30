@@ -29,7 +29,7 @@ export default class ItemAddForm extends Component {
                 onChange={this.onLabelChange}
                 placeholder="What needs to be done?"
                 value={this.state.label} />
-                <button className="btn btn-outline-secondary">
+                <button className="btn btn-add-form btn-outline-secondary">
                  Add Item</button>
             </form>
         );
